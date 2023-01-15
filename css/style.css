@@ -38,11 +38,13 @@ body {
     font-weight: 600;
     font-size: 20px;
 }
+
 .section-description {
     font-weight: 400;
     font-size: 16px;
     color: #727272;
     padding: 24px 0 30px 0;
+    line-height: 26px;
 }
 
 /* Header Section Starts */
@@ -103,6 +105,7 @@ body {
     padding-top: 50px;
     border-radius: 10px;
 }
+
 /* Header Section Ends */
 
 /* Teams Section Starts */
@@ -135,6 +138,80 @@ body {
 
 /* Header Section Ends */
 
+/* Future Section Starts */
+
+.futures {
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.futures-description {
+    margin-top: 85px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 140px;
+}
+
+.border-left {
+    border-left: 5px solid var(--btn-primary);
+    padding-left: 15px;
+}
+
+.experience-1 {
+    padding: 25px 35px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.06);
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.ten-years {
+    position: relative;
+    bottom: 162px;
+}
+
+.tenplus {
+    font-weight: 700;
+    font-size: 65px;
+}
+
+/* Future Section Ends */
+
+
+/* Section Facts Start */
+.facts {
+    display: flex;
+    flex-direction: column;
+    max-width: var(--max-width);
+    margin: 85px auto auto auto;
+}
+
+.facts-of-accomplish-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-row-gap: 20px;
+}
+
+.accomplished-container {
+    width: 190px;
+    height: 200px;
+    border: 1px solid #FF900E;
+    border-radius: 8px;
+    margin: 40px auto auto auto;
+    padding: 40px 45px;
+    text-align: center;
+}
+
+.accomplished {
+    font-weight: 600;
+    font-size: 20px;
+    color: #727272;
+}
+.c {
+    margin-bottom: 30px;
+}
+
+/* Section Facts End */
 
 
 
@@ -145,45 +222,63 @@ body {
 Responsive For Mobile Device */
 
 /* Header media query Start */
-    @media only screen and (max-width: 688px) {
-        .header-container {
-            padding-top: 10px;
-            height: 1050px;
-        }
+@media only screen and (max-width: 688px) {
+    .header-container {
+        padding-top: 10px;
+        height: 1050px;
+    }
 
-        .header-top,
-        .nav ul {
-            flex-direction: column;
-            align-items: center;
-        }
+    .header-top,
+    .nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
 
-        .nav ul {
-            gap: 20px;
-        }
+    .nav ul {
+        gap: 20px;
+    }
 
-        .header-middle {
-            width: 100%;
-            text-align: center;
+    .header-middle {
+        width: 100%;
+        text-align: center;
 
-        }
-        .header-bottom > img {
-            width: 100%;
-            margin-top: 50px;
-        }
-        .teams-container {
-            grid-template-columns: repeat(1, 1fr);
-        }
-        .team-members {
-            grid-template-columns: repeat(1, 1fr);
-        }
-        .team-members img {
-            width: 100%;
-        }
-        .team-goal {
-            width: 100%;
-        }
+    }
+
+    .header-bottom>img {
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .teams-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .team-members {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .team-members img {
+        width: 100%;
+    }
+
+    .team-goal {
+        width: 100%;
+    }
+
+    .futures-description {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .experience-achieved img {
+        width: 100%;
+    }
+    .facts-of-accomplish-container {
+        grid-template-columns: repeat(1, 1fr);
+        max-width: 0 auto;
+    }
 
 
-    }     
+
+}
+
 /* Section Teams Media Query Ends */
-
