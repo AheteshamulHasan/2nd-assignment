@@ -1,7 +1,12 @@
-/* Google Import Fonts */
+/*-============>
+Google Import Fonts 
+<==============*/
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@400;500&family=Work+Sans:wght@500;600;700&display=swap');
 
-/* Root Variables */
+
+/*-============>
+Root Variables 
+<==============*/
 :root {
     --bg-primary: #FFF4E7;
     --bg-secondary: #ffffff;
@@ -9,7 +14,9 @@
     --max-width: 1450px;
 }
 
-/* Universal & Common Styles & Reusable Styles  */
+/*-============>
+Universal, Common, & Reusable Styles 
+<==============*/
 * {
     margin: 0;
     padding: 0;
@@ -47,7 +54,9 @@ body {
     line-height: 26px;
 }
 
-/* Header Section Starts */
+/*-============>
+Header Section Styles Starts 
+<==============*/
 .header {
     width: 100%;
     background-color: var(--bg-primary);
@@ -78,6 +87,12 @@ body {
     font-size: 18px;
 }
 
+.nav ul li a {
+    text-decoration: none;
+    color: #424242;
+}
+
+
 .header-middle {
     width: 862px;
     height: 450px;
@@ -106,9 +121,14 @@ body {
     border-radius: 10px;
 }
 
-/* Header Section Ends */
+/*-============>
+Ends Header Section Styles 
+<==============*/
 
-/* Teams Section Starts */
+
+/*-============>
+Teams Section Styles Starts 
+<==============*/
 .our-teams-goals {
     max-width: var(--max-width);
     margin: 0 auto;
@@ -136,10 +156,13 @@ body {
     align-items: flex-start;
 }
 
-/* Header Section Ends */
+/*-============>
+End Teams Section Styles 
+<==============*/
 
-/* Future Section Starts */
-
+/*-============>
+Future Section Styles Starts
+<==============*/
 .futures {
     max-width: var(--max-width);
     margin: 0 auto;
@@ -164,10 +187,15 @@ body {
     border-radius: 8px;
     margin-bottom: 20px;
 }
+.experience-achieved:hover .ten-years {
+    animation-name: onhover;
+    animation-duration: 2s;
+    animation-timing-function: ease-in ease-out;
+}
 
 .ten-years {
     position: relative;
-    bottom: 162px;
+
 }
 
 .tenplus {
@@ -175,10 +203,13 @@ body {
     font-size: 65px;
 }
 
-/* Future Section Ends */
+/*-============>
+End Future Section Styles
+<==============*/
 
-
-/* Section Facts Start */
+/*-============>
+Section Facts Styles Start 
+<==============*/
 .facts {
     display: flex;
     flex-direction: column;
@@ -207,18 +238,72 @@ body {
     font-size: 20px;
     color: #727272;
 }
-/* Section Facts End */
+
+/*-============>
+Ends Section Facts Styles
+<==============*/
+
+/*-============>
+Section Sponsors Styles Start
+<==============*/
+.our-sponsors {
+    max-width: var(--max-width);
+    margin: 85px auto auto auto;
+    text-align: center;
+}
+
+.sponsors-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin-top: 40px;
+}
+
+/*-============>
+End Section Sponsors Styles
+<==============*/
+
+/*-============>
+Footer Styles Start
+<==============*/
+.footer-container {
+    max-width: var(--max-width);
+    height: 100px;
+    margin: 85px auto 100px auto;
+    text-align: center;
+    background-color: #FFF4E7;
+    border-radius: 8px;
+}
+
+.font-style {
+    padding: 40px 0;
+}
+
+/*-============>
+Footer Styles Start
+<==============*/
 
 
 
+/* @KeyFrame Animation */
+
+@keyframes onhover {
+    0% {
+      transform: translateX(0);
+    }
+  
+    50% {
+      transform: translateY(-160px);
+    }
+
+  }
 
 
 
-/* --- Media Query ----
-Responsive For Mobile Device */
-
-/* Header media query Start */
-@media only screen and (max-width: 688px) {
+/*-============>
+--- Media Query ----
+Responsive For Mobile Device
+<==============*/
+@media only screen and (max-width: 576px) {
     .header-container {
         padding-top: 10px;
         height: 1050px;
@@ -268,12 +353,20 @@ Responsive For Mobile Device */
     .experience-achieved img {
         width: 100%;
     }
+
     .facts-of-accomplish-container {
         grid-template-columns: repeat(1, 1fr);
         max-width: 0 auto;
     }
 
+    .sponsors-container {
+        grid-template-columns: repeat(1, 1fr);
+        grid-row-gap: 20px;
+    }
 
+    .footer-container {
+        width: 100%;
+    }
 
 }
 
